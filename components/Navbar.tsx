@@ -14,7 +14,7 @@ export default function Navbar() {
                 <DialogBackdrop className="fixed inset-0 bg-black/25" />
                 <div className="fixed inset-0 z-40 flex">
                     <DialogPanel className="relative flex w-full max-w-xs flex-col bg-white pb-6 shadow-xl">
-                        {/* Close button */}
+                        
                         <div className="flex justify-end px-4 pt-5">
                             <button
                                 type="button"
@@ -26,7 +26,13 @@ export default function Navbar() {
                         </div>
 
                         {/* links */}
-                        <div className="mt-6 space-y-4 px-4">
+                        
+                        <div className="mt-3 space-y-4 px-4">
+                            <img
+                                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                                    alt="Logo"
+                                    className="h-8 w-auto"
+                                />
                             <a href="/" className="block text-lg font-medium text-gray-900">Home</a>
                             <a href="/products" className="block text-lg font-medium text-gray-900">Products</a>
                             <a href="/cart" className="block text-lg font-medium text-gray-900">Cart</a>
@@ -39,7 +45,7 @@ export default function Navbar() {
 
             {/* Desktop navbar */}
             <header className="relative bg-white">
-                <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <nav className="mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between border-b border-gray-200">
                         {/* Mobile menu button */}
                         <div className="flex lg:hidden">
@@ -52,22 +58,20 @@ export default function Navbar() {
                             </button>
                         </div>
 
-                        {/* Logo */}
-                        <div className="flex items-center">
+                        {/* Desktop menu links */}
+                        <div className="flex items-center lg:space-x-8">
                             <a href="/" className="flex items-center">
                                 <img
                                     src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                                     alt="Logo"
                                     className="h-8 w-auto"
                                 />
-                                <span className="ml-2 font-bold text-indigo-600">MyStore</span>
                             </a>
-                        </div>
+                            <div className="hidden lg:flex lg:space-x-8">
+                                <a href="/" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Home</a>
+                                <a href="/products" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Products</a>
+                            </div>
 
-                        {/* Desktop menu links */}
-                        <div className="hidden lg:flex lg:space-x-8">
-                            <a href="/" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Home</a>
-                            <a href="/products" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Products</a>
                         </div>
 
 
