@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import { useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -14,7 +15,7 @@ export default function Navbar() {
                 <DialogBackdrop className="fixed inset-0 bg-black/25" />
                 <div className="fixed inset-0 z-40 flex">
                     <DialogPanel className="relative flex w-full max-w-xs flex-col bg-white pb-6 shadow-xl">
-                        
+
                         <div className="flex justify-end px-4 pt-5">
                             <button
                                 type="button"
@@ -26,18 +27,18 @@ export default function Navbar() {
                         </div>
 
                         {/* links */}
-                        
+
                         <div className="mt-3 space-y-4 px-4">
                             <img
-                                    src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                    alt="Logo"
-                                    className="h-8 w-auto"
-                                />
-                            <a href="/" className="block text-lg font-medium text-gray-900">Home</a>
-                            <a href="/products" className="block text-lg font-medium text-gray-900">Products</a>
-                            <a href="/cart" className="block text-lg font-medium text-gray-900">Cart</a>
-                            <a href="/login" className="block text-lg font-medium text-gray-900">Login</a>
-                            <a href="/signup" className="block text-lg font-medium text-gray-900">Sign up</a>
+                                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                                alt="Logo"
+                                className="h-8 w-auto"
+                            />                            
+                            <Link href="/" className="block text-lg font-medium text-gray-900">Home</Link>
+                            <Link href="/products" className="block text-lg font-medium text-gray-900">Products</Link>
+                            <Link href="/cart" className="block text-lg font-medium text-gray-900">Cart</Link>
+                            <Link href="/login" className="block text-lg font-medium text-gray-900">Login</Link>
+                            <Link href="/signup" className="block text-lg font-medium text-gray-900">Sign up</Link>
                         </div>
                     </DialogPanel>
                 </div>
@@ -60,16 +61,16 @@ export default function Navbar() {
 
                         {/* Desktop menu links */}
                         <div className="flex items-center lg:space-x-8">
-                            <a href="/" className="flex items-center">
+                            <Link href="/" className="flex items-center">
                                 <img
                                     src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                                     alt="Logo"
                                     className="h-8 w-auto"
                                 />
-                            </a>
+                            </Link>
                             <div className="hidden lg:flex lg:space-x-8">
-                                <a href="/" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Home</a>
-                                <a href="/products" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Products</a>
+                                <Link href="/" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Home</Link>
+                                <Link href="/products" className="text-sm font-medium text-gray-700 hover:text-indigo-600">Products</Link>
                             </div>
 
                         </div>

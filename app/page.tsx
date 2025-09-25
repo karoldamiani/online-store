@@ -3,8 +3,6 @@
 import Navbar from '@/components/Navbar'
 
 
-
-
 export default function Home() {
   return (
     <main className="bg-white ">
@@ -23,7 +21,7 @@ export default function Home() {
           </div>
           <div>
             <div className="mt-10">
-              {/* Decorative image grid */}
+              
               <div
                 aria-hidden="true"
                 className="pointer-events-none lg:relative lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
